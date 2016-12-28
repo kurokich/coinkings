@@ -153,7 +153,7 @@ public class CombineMeshInEditorWindow : EditorWindow
 			
 				switch(m_textureImportSettings.textureType)
 				{
-				case TextureImporterType.Bump:					
+				case TextureImporterType.NormalMap:					
 					//m_textureImportSettings.convertToNormalmap = EditorGUILayout.Toggle("", m_textureImportSettings.convertToNormalmap);
 					m_textureImportSettings.heightmapScale = EditorGUILayout.Slider(m_textureImportSettings.heightmapScale, 0.0f, 0.3f);
 					m_textureImportSettings.normalmapFilter = (TextureImporterNormalFilter)EditorGUILayout.EnumPopup("Normal Map Filter", m_textureImportSettings.normalmapFilter);
@@ -171,9 +171,9 @@ public class CombineMeshInEditorWindow : EditorWindow
 					m_textureImportSettings.filterMode = (FilterMode)EditorGUILayout.EnumPopup("Texture Filter Mode", m_textureImportSettings.filterMode);
 					m_textureImportSettings.anisoLevel = EditorGUILayout.IntSlider("Aniso Level", m_textureImportSettings.anisoLevel, 0, 10);
 					break;
-				case TextureImporterType.Image:
+				case TextureImporterType.Default:
 				default:
-					m_textureImportSettings.textureType = TextureImporterType.Image;
+					m_textureImportSettings.textureType = TextureImporterType.Default;
 					m_textureImportSettings.grayscaleToAlpha = EditorGUILayout.Toggle("Alpha From Grayscale", m_textureImportSettings.grayscaleToAlpha);
 					m_textureImportSettings.wrapMode = (TextureWrapMode)EditorGUILayout.EnumPopup("Texture Wrap Mode", m_textureImportSettings.wrapMode);
 					m_textureImportSettings.filterMode = (FilterMode)EditorGUILayout.EnumPopup("Texture Filter Mode", m_textureImportSettings.filterMode);
@@ -528,7 +528,7 @@ public class TextureImportSettings
 		anisoLevel = 1;
 		filterMode = FilterMode.Bilinear;
 		wrapMode = TextureWrapMode.Repeat;
-		textureType = TextureImporterType.Image;
+		textureType = TextureImporterType.Default;
 	}
 }
 

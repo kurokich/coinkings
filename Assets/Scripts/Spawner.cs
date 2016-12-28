@@ -18,12 +18,6 @@ public class Spawner : MonoBehaviour
 	{
 		meatStop = true;
 		stopCount = 0;
-
-        coins[0].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1.0f);
-        coins[1].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1.0f);
-        coins[2].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1.0f);
-        coins[3].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1.0f);
-        coins[4].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1.0f);
         StartCoroutine(FuncCoroutine());
     }
 	
@@ -79,7 +73,6 @@ public class Spawner : MonoBehaviour
             if (m < 4)
             {
                 m++;
-                Debug.Log(m);
                 setCoin(m);
             }
             yield return new WaitForSeconds(1);
@@ -100,43 +93,43 @@ public class Spawner : MonoBehaviour
     {
         if (t >= 4)
         {
-            coins[4].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1.0f);
+            coins[4].SetActive(true);
         }
         else
         {
-            coins[4].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.0f);
+            coins[4].SetActive(false);
         }
         if (t >= 3)
         {
-            coins[3].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1.0f);
+            coins[3].SetActive(true);
         }
         else
         {
-            coins[3].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.0f);
+            coins[3].SetActive(false);
         }
         if (t >= 2)
         {
-            coins[2].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1.0f);
+            coins[2].SetActive(true);
         }
         else
         {
-            coins[2].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.0f);
+            coins[2].SetActive(false);
         }
         if (t >= 1)
         {
-            coins[1].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1.0f);
+            coins[1].SetActive(true);
         }
         else
         {
-            coins[1].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.0f);
+            coins[1].SetActive(false);
         }
         if (t >= 0)
         {
-            coins[0].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1.0f);
+            coins[0].SetActive(true);
         }
         else
         {
-            coins[0].GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.0f);
+            coins[0].SetActive(false);
         }
     }
 }

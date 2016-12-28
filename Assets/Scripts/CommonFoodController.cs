@@ -47,6 +47,7 @@ public class CommonFoodController : MonoBehaviour {
             }
             else if(type == 0)
             {
+                Debug.Log(collisionInfo.name);
                 collisionInfo.gameObject.GetComponent<hitPlane>().OnCollision();
                 Destroy(this.gameObject);
             }

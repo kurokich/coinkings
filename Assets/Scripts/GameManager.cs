@@ -9,13 +9,17 @@ public class GameManager : MonoBehaviour {
     private GameObject currentHpSurface;
     private GameObject attackMark;
     private GameObject defendMark;
+    private GameObject windowRoot;
+    private UILabel hpObject;
     private float per;
 
     void Start()
     {
+        windowRoot = GameObject.Find("UI Root_Window");
         currentHpSurface = transform.FindChild("surface").gameObject;
         attackMark = transform.FindChild("AttackMark").gameObject;
         defendMark = transform.FindChild("DefendMark").gameObject;
+        hpObject = transform.FindChild("HP").gameObject.GetComponent<UILabel>();
 
         initiMode();
         UpdateSurface();
@@ -53,10 +57,36 @@ public class GameManager : MonoBehaviour {
     {
         if(damage > 0)
         {
-            current_hp--;
-            damage--;
-            if (current_hp < 0) current_hp = 0;
-            UpdateSurface();
+            if ((current_hp - damage) <= 0)
+            {
+                damage = 0;
+                current_hp = 0;
+                UpdateSurface();
+                GameObject prefab = (GameObject)Resources.Load("Prefabs/ClearWindow");
+                Vector2 pos = new Vector3(-10.0f, 189.0f, -613.0f);
+                if (transform.name == "Player")
+                {
+                    GameObject obj = (GameObject)Instantiate(prefab, Vector3.zero, Quaternion.identity);
+                    obj.transform.parent = windowRoot.transform;
+                    obj.transform.localPosition = pos;
+                    obj.GetComponent<GameClearWindow>().InitializeWindow("Game Over");
+                }
+                else if (transform.name == "Enemy")
+                {
+                    GameObject obj = (GameObject)Instantiate(prefab, Vector3.zero, Quaternion.identity);
+                    obj.transform.parent = windowRoot.transform;
+                    obj.transform.localPosition = pos;
+                    obj.GetComponent<GameClearWindow>().InitializeWindow("Game Clear");
+                }
+            }
+            else
+            {
+                current_hp--;
+                damage--;
+                if (current_hp < 0) current_hp = 0;
+                UpdateSurface();
+                hpObject.text = current_hp.ToString();
+            }
         }
     }
 }

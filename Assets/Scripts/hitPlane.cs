@@ -17,7 +17,7 @@ public class hitPlane : MonoBehaviour {
     }
     public void OnCollision()
     {
-        if (enemy.GetComponent<GameManager>().mode == 0)
+        if (enemy.GetComponent<GameManager>().mode == 1)
         {
             enemy.GetComponent<GameManager>().damage += 100;
             //enemy_damage_animate.SetTrigger("damage");
