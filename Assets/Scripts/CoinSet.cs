@@ -42,7 +42,7 @@ public class CoinSet : MonoBehaviour {
         {
             touched = c;
             Effect.SetActive(true);
-            Effect.transform.localPosition = new Vector3(80,- 100 * c,-160);
+            Effect.transform.localPosition = new Vector3(80,- 100 * c,-153);
         }else if(touched == c)
         {
             touched = 0;
