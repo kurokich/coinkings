@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6b3f750ae2022484391f6053fa79920f
+timeCreated: 1486372421
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Koku Gothic Light
+  fontNames:
+  - Koku Gothic Light
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

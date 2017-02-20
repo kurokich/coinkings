@@ -1,0 +1,114 @@
+ManifestFileVersion: 0
+CRC: 922993758
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 56e91e2aeedd80913df160bafcaf4237
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 161619f5c3eed9d992ae67f5aa4fd2f6
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 1679637790, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1d397f4bf6b004a2586737f2abf09208, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/JOKER_GAME/Resources/novel/data/prefab/Image.prefab
+- Assets/JOKER_GAME/Resources/novel/data/bgm/music.mp3
+- Assets/JOKER_GAME/Resources/novel/data/images/image/skip.gif
+- Assets/JOKER_GAME/Resources/novel/data/scenario/wide/libs/utils.txt
+- Assets/JOKER_GAME/Resources/novel/data/images/image/title_load.gif
+- Assets/JOKER_GAME/Resources/novel/data/scenario/tall/libs/utils.txt
+- Assets/JOKER_GAME/Resources/novel/data/prefab/Button.prefab
+- Assets/JOKER_GAME/Resources/novel/data/images/image/load.gif
+- Assets/JOKER_GAME/Resources/novel/data/images/image/unity_logo.png
+- Assets/JOKER_GAME/Resources/novel/data/images/character/kiri_k.png
+- Assets/JOKER_GAME/Resources/novel/data/images/background/rouka.jpg
+- Assets/JOKER_GAME/Resources/novel/data/images/image/button.png
+- Assets/JOKER_GAME/Resources/novel/data/scenario/wide/libs/save.txt
+- Assets/JOKER_GAME/Resources/novel/data/scenario/wide/title.txt
+- Assets/JOKER_GAME/Resources/novel/data/images/image/title_start.gif
+- Assets/JOKER_GAME/Resources/novel/data/sound/button.mp3
+- Assets/JOKER_GAME/Resources/novel/data/images/background/room_tall.png
+- Assets/JOKER_GAME/Resources/novel/data/images/character/kiri_a.png
+- Assets/JOKER_GAME/Resources/novel/data/images/image/log.gif
+- Assets/JOKER_GAME/Resources/novel/data/bgm/dream.mp3
+- Assets/JOKER_GAME/Resources/novel/data/images/background/school.jpg
+- Assets/JOKER_GAME/Resources/novel/data/images/character/chara_a.png
+- Assets/JOKER_GAME/Resources/novel/data/images/image/auto.gif
+- Assets/JOKER_GAME/Resources/novel/data/sound/start.mp3
+- Assets/JOKER_GAME/Resources/novel/data/scenario/tall/libs/save.txt
+- Assets/JOKER_GAME/Resources/novel/data/prefab/Text.prefab
+- Assets/JOKER_GAME/Resources/novel/data/images/character/chara_w.png
+- Assets/JOKER_GAME/Resources/novel/data/scenario/tall/title.txt
+- Assets/JOKER_GAME/Resources/novel/data/scenario/tall/system.txt
+- Assets/JOKER_GAME/Resources/novel/data/images/character/kiri.png
+- Assets/JOKER_GAME/Resources/novel/data/images/image/config.gif
+- Assets/JOKER_GAME/Resources/novel/data/images/image/close.gif
+- Assets/JOKER_GAME/Resources/novel/data/images/background/savebg_tall.png
+- Assets/JOKER_GAME/Resources/novel/data/scenario/wide/scene1.txt
+- Assets/JOKER_GAME/Resources/novel/data/images/image/menu.png
+- Assets/JOKER_GAME/Resources/novel/data/images/background/title.png
+- Assets/JOKER_GAME/Resources/novel/data/prefab/Clickable.prefab
+- Assets/JOKER_GAME/Resources/novel/data/images/system/trans.png
+- Assets/JOKER_GAME/Resources/novel/data/sound/click.mp3
+- Assets/JOKER_GAME/Resources/novel/data/scenario/wide/system.txt
+- Assets/JOKER_GAME/Resources/novel/data/images/system/frame.png
+- Assets/JOKER_GAME/Resources/novel/data/images/image/button2.png
+- Assets/JOKER_GAME/Resources/novel/data/prefab/CanvasLog.prefab
+- Assets/JOKER_GAME/Resources/novel/data/images/background/room.jpg
+- Assets/JOKER_GAME/Resources/novel/data/images/background/title_tall.png
+- Assets/JOKER_GAME/Resources/novel/data/scenario/wide/libs/menu.txt
+- Assets/JOKER_GAME/Resources/novel/data/images/character/chara.png
+- Assets/JOKER_GAME/Resources/novel/data/scenario/first.txt
+- Assets/JOKER_GAME/Resources/novel/data/images/image/save.gif
+- Assets/JOKER_GAME/Resources/novel/data/scenario/tall/libs/menu.txt
+- Assets/JOKER_GAME/Resources/novel/data/prefab/LogContent.prefab
+- Assets/JOKER_GAME/Resources/novel/data/images/character/chara_k.png
+- Assets/JOKER_GAME/Resources/novel/data/images/image/title.gif
+- Assets/JOKER_GAME/Resources/novel/data/scenario/tall/scene1.txt
+- Assets/JOKER_GAME/Resources/novel/data/images/system/black.png
+- Assets/JOKER_GAME/Resources/novel/data/config/config.txt
+- Assets/JOKER_GAME/Resources/novel/data/images/background/savebg.jpg
+Dependencies: []
