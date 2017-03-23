@@ -2,10 +2,13 @@ using UnityEngine;
 using System.Collections;
 
 public class CommonFoodController : MonoBehaviour {
-    public int type; 
+    public int type;
+    public GameObject SurfaceCamera;
+    public GameObject CutIn;
 	// Update is called once per frame
     void Awake()
     {
+        SurfaceCamera = GameObject.Find("SurfaceCamera");
         //爆弾
         if (type == 3)
         {
@@ -24,8 +27,7 @@ public class CommonFoodController : MonoBehaviour {
     IEnumerator Skill_Explode()
     {
         yield return new WaitForSeconds(3);
-        this.gameObject.GetComponent<Detonator>().Explode();
-        Debug.Log("explode");
+        gameObject.GetComponent<Detonator>().Explode();
         yield break;
     }
     //ヒットプレーンに乗った場合
@@ -34,27 +36,35 @@ public class CommonFoodController : MonoBehaviour {
             {
             GameObject.Find("Slot").GetComponent<SlotController>().ReelStop();
             Destroy(this.gameObject);
-            /*
-            //攻守入れ替え
             if (type == 1)
             {
-                Debug.Log("mode");
-                collisionInfo.gameObject.GetComponent<hitPlane>().player.GetComponent<GameManager>().ModeChange();
-                collisionInfo.gameObject.GetComponent<hitPlane>().enemy.GetComponent<GameManager>().ModeChange();
+                //爆発コイン投下
+                GameObject.Find("Spawner").GetComponent<Spawner>().AddExplode();
                 Destroy(this.gameObject);
             }
             else if (type == 2)
             {
-                GameObject.Find("Spawner").GetComponent<Spawner>().Add_Explode();
+                //攻守入れ替え
+                collisionInfo.gameObject.GetComponent<hitPlane>().player.GetComponent<PlayerManager>().ModeChange();
+                collisionInfo.gameObject.GetComponent<hitPlane>().enemy.GetComponent<PlayerManager>().ModeChange();
                 Destroy(this.gameObject);
             }
-            else if(type == 0)
+            else if (type == 4)
             {
-                Debug.Log(collisionInfo.name);
-                collisionInfo.gameObject.GetComponent<hitPlane>().OnCollision();
+                GameObject go = (GameObject)Instantiate(CutIn, new Vector3(0.0f, 1.0f, 5.0f), Quaternion.identity);
+                go.transform.parent = GameObject.Find("UI Root_Window").transform;
+                go.transform.position = new Vector3(100.0f, 100.0f, 100.0f);
+                go.transform.rotation = Quaternion.Euler(0, 0, 0);
+                go.transform.localScale = new Vector3(100.0f, 100.0f, 100.0f);
+                //バズーカ
                 Destroy(this.gameObject);
+
             }
-            */
+            else
+            {
+                collisionInfo.gameObject.GetComponent<hitPlane>().OnCollision();
+                Destroy(this.gameObject);            
+            }
         }
     }
 }

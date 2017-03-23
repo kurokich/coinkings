@@ -5,7 +5,7 @@ using System.Collections;
 public class CameraUtility : MonoBehaviour
 {
 
-	private Vector2 aspect = new Vector2(4,3);
+	private Vector2 aspect = new Vector2(2,1);
 	private Color32 backgroundColor = Color.black;
 	private  float aspectRate ;
 	private Camera _camera;

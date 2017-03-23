@@ -22,11 +22,22 @@ public class TitleManager : MonoBehaviour {
     public void StartButton()
     {
         Debug.Log("start");
-        SceneManager.LoadScene("Main");
+        StartCoroutine(this.invokeActionOnloadScene("Main", () => {
+            var main = FindObjectOfType<Main>() as Main;
+            //main.Param = new Main.Parameter { DebugMode = false };
+        }));
+    }
+    public void DebugStartButton()
+    {
+        Debug.Log("start");
+        StartCoroutine(this.invokeActionOnloadScene("Main", () => {
+            var main = FindObjectOfType<Main>() as Main;
+            main.Param = new Main.Parameter { DebugMode = true };
+        }));
     }
     public void ScenarioButton()
     {
-        NovelSingleton.StatusManager.callJoker("tall/scene1", "");
+        NovelSingleton.StatusManager.callJoker("wide/scene1", "");
     }
     public void StartShopWindow()
     {
@@ -37,5 +48,13 @@ public class TitleManager : MonoBehaviour {
             window.transform.localPosition = new Vector3(0, 0, 30);
             window.transform.localScale = new Vector3(1, 1, 1);
         }
+    }
+
+    private IEnumerator invokeActionOnloadScene(string sceneName, System.Action onLoad)
+    {
+        var asyncOp = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        yield return asyncOp;
+        onLoad.Invoke();
+        SceneManager.UnloadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

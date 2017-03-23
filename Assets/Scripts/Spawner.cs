@@ -8,10 +8,13 @@ public class Spawner : MonoBehaviour
     public GameObject CoinText;
     public GameObject CoinSet;
     public GameObject coinLimitter;
+    public PhysicMaterial SlipPhysics;
     public int m;
+    public bool DebugMode = false;
 	private GameObject clone;
 	private bool meatStop;
-	private int stopCount;
+    private bool nextSlip = false;
+    private int stopCount;
 	private int growCount;
 	
 	void Start()
@@ -41,7 +44,7 @@ public class Spawner : MonoBehaviour
 					Vector3 offset = new Vector3 (hit.point.x,  0.6f,  2.6f);
 					if(CoinText.GetComponent<CoinManager>().CoinMount > 0 && m >= 0){
                         //int rand2 = Random.Range(1,prefab.Length);
-                        AddCoin(hit.point);
+                        AddCoin(hit.point,CoinSet.GetComponent<CoinSet>().touched);
                         CoinText.GetComponent<CoinManager>().CoinChange(-1);
                         m--;
                         setCoin(m);
@@ -74,16 +77,41 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
     }
-    public void AddCoin(Vector3 pos)
+
+    public void OnDebugMode()
     {
-        GameObject go = (GameObject)Instantiate(prefab[CoinSet.GetComponent<CoinSet>().touched], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+        if (DebugMode)
+        {
+            DebugMode = false;
+        }
+        else
+        {
+            DebugMode = true;
+        }
+    }
+    public void AddCoin(Vector3 pos,int c)
+    {
+        GameObject go = (GameObject)Instantiate(prefab[c], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
         go.transform.parent = transform.parent;
         go.transform.position = new Vector3(pos.x, pos.y + 0.5f, pos.z);
-        go.transform.rotation = Quaternion.Euler(-90, 0, 0);
-        go.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        go.transform.rotation = Quaternion.Euler(90, 90, 0);
+        if (c > 2)
+        {
+            go.transform.localScale = new Vector3(10.0f, 10.0f, 10.0f);
+        }
+        else
+        {
+            go.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        }
+        //滑りコイン
+        if (nextSlip)
+        {
+            go.GetComponent<MeshCollider>().material = SlipPhysics;
+            nextSlip = false;
+        }
     }
     //爆発スキル
-    public void Add_Explode()
+    public void AddExplode()
     {
         GameObject go = (GameObject)Instantiate(prefab[3], new Vector3(0.0f, 1.0f, 5.0f), Quaternion.identity);
         int rand = Random.Range(1,prefab.Length);
@@ -92,7 +120,11 @@ public class Spawner : MonoBehaviour
         go.transform.rotation = Quaternion.Euler(-90, 0, 0);
         go.transform.localScale = new Vector3(10.0f, 10.0f, 30.0f);
     }
-
+    //次のコインを滑りコインにする
+    public void nextSlipCoin()
+    {
+        nextSlip = true;
+    }
     private void setCoin(int t)
     {
         if (t >= 4)

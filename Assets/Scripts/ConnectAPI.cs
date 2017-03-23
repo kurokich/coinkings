@@ -10,6 +10,7 @@ public class ConnectAPI : MonoBehaviour {
     public string udid = "wbti2urffzkh";
     public string result;
     public Data data;
+    public GameObject RegistWindow;
     private Action postRegistFunction;
     private Action postSessionFunction;
     private Action postLoadInfomation;
@@ -20,7 +21,7 @@ public class ConnectAPI : MonoBehaviour {
     void Start()
     {
         connectAPI = GetComponent<ConnectAPI>();
-
+        RegistWindow.SetActive(false);
         postRegistFunction = delegate
         {
             data = JsonUtility.FromJson<Data>(result);
@@ -46,10 +47,15 @@ public class ConnectAPI : MonoBehaviour {
         };
 
     }
-    //会員登録
-    public void GetRegist()
+    //会員登録ウィンドウ
+    public void RegistButton()
     {
-        StartCoroutine(GetRequestURL("http://api.axions.jp/coin/api/mmember.do?param=entry&membername="+membername+"&code="+udid,postRegistFunction));        
+        RegistWindow.SetActive(true);
+    }
+    //会員登録
+    public void GetRegist(string name,string udid)
+    {
+        StartCoroutine(GetRequestURL("http://api.axions.jp/coin/api/mmember.do?param=entry&membername="+name+"&code="+udid,postRegistFunction));
     }
     //セッションスタート
     public void SessionStart()
@@ -105,10 +111,10 @@ public class ConnectAPI : MonoBehaviour {
         }
         else
         {
+            Debug.Log(request.responseCode);
             if (request.responseCode == 200)
             {
                 result = request.downloadHandler.text;
-                Debug.Log(result);
                 act();
             }
         }
