@@ -11,12 +11,10 @@ public class Main : MonoBehaviour {
 
     void Start()
     {
-#if UNITY_EDITOR
         if (this.Param == null)
         {
             this.Param = new Parameter { DebugMode = false };
         }
-#endif
         Debug.Log(this.Param.DebugMode);
     }
 }
