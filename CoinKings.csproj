@@ -308,6 +308,7 @@
     <Compile Include="Assets\Scripts\CommonFoodController.cs" />
     <Compile Include="Assets\Scripts\ConnectAPI.cs" />
     <Compile Include="Assets\Scripts\Data.cs" />
+    <Compile Include="Assets\Scripts\DebugLogWindow.cs" />
     <Compile Include="Assets\Scripts\DebugScript.cs" />
     <Compile Include="Assets\Scripts\GameClearWindow.cs" />
     <Compile Include="Assets\Scripts\GlobalVariables.cs" />
