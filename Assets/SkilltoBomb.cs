@@ -11,13 +11,11 @@ public class SkilltoBomb : MonoBehaviour {
     public GameObject Bom3;
     public GameObject ParentGameObject;
 
-    void Awake()
+    public void Awake()
     {
-        if(ParentGameObject == null)
-        {
-            ParentGameObject = GameObject.Find("Main Camera").gameObject;
-        }
+        ParentGameObject = GameObject.Find("Main Camera");
     }
+
     public void EndCutIn()
     {
         Vector3 vec = new Vector3(-15,-691,65);

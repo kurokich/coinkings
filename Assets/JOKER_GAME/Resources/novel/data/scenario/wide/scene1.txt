@@ -12,8 +12,8 @@
 ;---------------キャラ定義
 
 @tag_default tag="chara"
-[chara_new name="maid_a" storage="000" jname="メイドA" scale=1 jcolor=FF77FF]
-[chara_new name="maid_b" storage="001" jname="メイドB" scale=1 jcolor=22FFFF]
+[chara_new name="maid_a" storage="000" jname="メイドA" scale=2 jcolor=FF77FF]
+[chara_new name="maid_b" storage="001" jname="メイドB" scale=2 jcolor=22FFFF]
 @reset_tag_default
 
 ;ゆうこの表情登録
@@ -26,8 +26,8 @@
 ;[chara_face name="mai" face="komaru" storage=kiri_k ]
 
 
-@chara_pos name="maid_a" x=3 y=-0.7
-@chara_pos name="maid_b" x=-3 y=-0.7
+@chara_pos name="maid_a" x=0 y=-0.7
+@chara_pos name="maid_b" x=-5 y=-0.7
 
 ;@show name=maid_a
 
@@ -65,9 +65,9 @@ JOKERスクリプトのテストです。[p]
 #maid_a
 キャラの同時表示[p]
 
-[anim name="maid_b" x=-6 type="easeInOutCirc"]
+[anim name="maid_b" x=-3 type="easeInOutCirc"]
 
-@show name="maid_b" x=-3
+@show name="maid_b" x=3
 #maid_b
 こんなかんじ[p]
 
