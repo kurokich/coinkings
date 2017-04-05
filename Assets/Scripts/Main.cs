@@ -11,18 +11,12 @@ public class Main : MonoBehaviour {
 
     void Start()
     {
-<<<<<<< HEAD
-=======
 #if UNITY_EDITOR
->>>>>>> parent of ce2eba3... Detonatorを指定
         if (this.Param == null)
         {
             this.Param = new Parameter { DebugMode = false };
         }
-<<<<<<< HEAD
-=======
 #endif
->>>>>>> parent of ce2eba3... Detonatorを指定
         Debug.Log(this.Param.DebugMode);
     }
 }

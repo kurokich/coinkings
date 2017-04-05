@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4B4A57F8-DE4D-1843-32C8-64DF5B64ADCB}</ProjectGuid>
+    <ProjectGuid>{8A5C3BCF-593F-7249-F045-5396D5393E06}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -367,36 +367,36 @@
     <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />
     <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
     <None Include="Assets\NGUI\ReadMe - 3.10.0.txt" />
+    <None Include="Assets\NGUI\Shaders\Refractive.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Additive Colored.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Depth Cutout.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Depth.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Masked Colored.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Premultiplied Colored (TextureClip).shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Premultiplied Colored 1.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Premultiplied Colored 2.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Premultiplied Colored 3.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Premultiplied Colored.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Text (TextureClip).shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Text 1.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Text 2.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Text 3.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Text.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Colored (Packed) (TextureClip).shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Colored (TextureClip).shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Colored 1.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Colored 2.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Colored 3.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Colored.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Masked 1.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Masked 2.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Masked 3.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Masked.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Packed 1.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Packed 2.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Packed 3.shader" />
+    <None Include="Assets\NGUI\Shaders\Unlit - Transparent Packed.shader" />
     <None Include="Assets\Resources\Detonator\Textures\HeatDistort.shader" />
-    <None Include="Assets\Resources\Shaders\Refractive.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Additive Colored.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Depth Cutout.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Depth.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Masked Colored.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Premultiplied Colored (TextureClip).shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Text (TextureClip).shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Text 1.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Text 2.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Text 3.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Text.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Colored (Packed) (TextureClip).shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Colored (TextureClip).shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Colored 1.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Colored 2.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Colored 3.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Colored.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Masked 1.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Masked 2.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Masked 3.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Masked.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Packed 2.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
-    <None Include="Assets\Resources\Shaders\Unlit - Transparent Packed.shader" />
     <None Include="Assets\font.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
