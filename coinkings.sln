@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "coinkings", "coinkings.csproj", "{8A5C3BCF-593F-7249-F045-5396D5393E06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinKings", "CoinKings.csproj", "{4B4A57F8-DE4D-1843-32C8-64DF5B64ADCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "coinkings.Editor", "coinkings.Editor.csproj", "{8DC1DC46-E89C-34B8-ADC1-A9B5266AE0CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinKings.Editor", "CoinKings.Editor.csproj", "{C808B9B8-F1AD-2BDD-5583-BF12A5F0AB66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8A5C3BCF-593F-7249-F045-5396D5393E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8A5C3BCF-593F-7249-F045-5396D5393E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A5C3BCF-593F-7249-F045-5396D5393E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8A5C3BCF-593F-7249-F045-5396D5393E06}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8DC1DC46-E89C-34B8-ADC1-A9B5266AE0CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8DC1DC46-E89C-34B8-ADC1-A9B5266AE0CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8DC1DC46-E89C-34B8-ADC1-A9B5266AE0CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8DC1DC46-E89C-34B8-ADC1-A9B5266AE0CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B4A57F8-DE4D-1843-32C8-64DF5B64ADCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B4A57F8-DE4D-1843-32C8-64DF5B64ADCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B4A57F8-DE4D-1843-32C8-64DF5B64ADCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B4A57F8-DE4D-1843-32C8-64DF5B64ADCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C808B9B8-F1AD-2BDD-5583-BF12A5F0AB66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C808B9B8-F1AD-2BDD-5583-BF12A5F0AB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C808B9B8-F1AD-2BDD-5583-BF12A5F0AB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C808B9B8-F1AD-2BDD-5583-BF12A5F0AB66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
