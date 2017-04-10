@@ -10,7 +10,6 @@ public class Spawner : MonoBehaviour
     public GameObject coinLimitter;
     public PhysicMaterial SlipPhysics;
     public int m;
-    public bool DebugMode = false;
 	private GameObject clone;
 	private bool meatStop;
     private bool nextSlip = false;
@@ -77,32 +76,21 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
     }
-
-    public void OnDebugMode()
-    {
-        if (DebugMode)
-        {
-            DebugMode = false;
-        }
-        else
-        {
-            DebugMode = true;
-        }
-    }
     public void AddCoin(Vector3 pos,int c)
     {
         GameObject go = (GameObject)Instantiate(prefab[c], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
         go.transform.parent = transform.parent;
         go.transform.position = new Vector3(pos.x, pos.y + 0.5f, pos.z);
-        go.transform.rotation = Quaternion.Euler(90, 90, 0);
-        if (c > 2)
-        {
-            go.transform.localScale = new Vector3(10.0f, 10.0f, 10.0f);
-        }
-        else
+        go.transform.rotation = Quaternion.Euler(-90, 0, 0);
+        if (c < 3)
         {
             go.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         }
+        else
+        {
+            go.transform.localScale = new Vector3(12, 12, 12);
+        }
+
         //滑りコイン
         if (nextSlip)
         {

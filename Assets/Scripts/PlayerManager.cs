@@ -64,7 +64,6 @@ public class PlayerManager : MonoBehaviour {
                 UpdateSurface();
                 GameObject prefab = (GameObject)Resources.Load("Prefabs/ClearWindow");
                 Vector2 pos = new Vector3(-10.0f, 189.0f, -613.0f);
-                /*
                 if (transform.name == "Player")
                 {
                     GameObject obj = (GameObject)Instantiate(prefab, Vector3.zero, Quaternion.identity);
@@ -79,7 +78,6 @@ public class PlayerManager : MonoBehaviour {
                     obj.transform.localPosition = pos;
                     obj.GetComponent<GameClearWindow>().InitializeWindow("Game Clear");
                 }
-                */
             }
             else
             {

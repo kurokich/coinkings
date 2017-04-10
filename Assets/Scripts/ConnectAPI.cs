@@ -21,7 +21,7 @@ public class ConnectAPI : MonoBehaviour {
     void Start()
     {
         connectAPI = GetComponent<ConnectAPI>();
-        RegistWindow.SetActive(false);
+
         postRegistFunction = delegate
         {
             data = JsonUtility.FromJson<Data>(result);
@@ -47,15 +47,15 @@ public class ConnectAPI : MonoBehaviour {
         };
 
     }
-    //会員登録ウィンドウ
+    //会員登録
     public void RegistButton()
     {
         RegistWindow.SetActive(true);
     }
     //会員登録
-    public void GetRegist(string name,string udid)
+    public void GetRegist()
     {
-        StartCoroutine(GetRequestURL("http://api.axions.jp/coin/api/mmember.do?param=entry&membername="+name+"&code="+udid,postRegistFunction));
+        StartCoroutine(GetRequestURL("http://api.axions.jp/coin/api/mmember.do?param=entry&membername="+membername+"&code="+udid,postRegistFunction));        
     }
     //セッションスタート
     public void SessionStart()
@@ -111,10 +111,10 @@ public class ConnectAPI : MonoBehaviour {
         }
         else
         {
-            Debug.Log(request.responseCode);
             if (request.responseCode == 200)
             {
                 result = request.downloadHandler.text;
+                Debug.Log(result);
                 act();
             }
         }

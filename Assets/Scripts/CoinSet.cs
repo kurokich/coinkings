@@ -49,7 +49,6 @@ public class CoinSet : MonoBehaviour {
     }
     public void touchAction(int c)
     {
-        Debug.Log(c);
         if(touched != c)
         {
             touched = c;

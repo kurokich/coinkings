@@ -27,7 +27,7 @@ public class CommonFoodController : MonoBehaviour {
     IEnumerator Skill_Explode()
     {
         yield return new WaitForSeconds(3);
-        gameObject.GetComponent<Detonator>().Explode();
+        GetComponent<Detonator>().Explode();
         yield break;
     }
     //ヒットプレーンに乗った場合
@@ -52,10 +52,10 @@ public class CommonFoodController : MonoBehaviour {
             else if (type == 4)
             {
                 GameObject go = (GameObject)Instantiate(CutIn, new Vector3(0.0f, 1.0f, 5.0f), Quaternion.identity);
-                go.transform.parent = GameObject.Find("UI Root_Window").transform;
+                go.transform.parent = SurfaceCamera.transform;
                 go.transform.position = new Vector3(100.0f, 100.0f, 100.0f);
+                go.transform.localScale = new Vector3(101, 101, 101);
                 go.transform.rotation = Quaternion.Euler(0, 0, 0);
-                go.transform.localScale = new Vector3(100.0f, 100.0f, 100.0f);
                 //バズーカ
                 Destroy(this.gameObject);
 
